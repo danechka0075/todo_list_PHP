@@ -1,0 +1,357 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Фон */
+body {
+    background: #667eea;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background: #1e3c72;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.h1Header {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.h1Header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Основной контент */
+main {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Главная */
+.home {
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home h1, .home h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.welcome-text {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+.features-preview {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background: rgba(255,255,255,0.2);
+    padding: 20px 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    min-width: 220px;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home-btn {
+    padding: 18px 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+.home-btn.primary {
+    background: #667eea;
+    border: 2px solid white;
+}
+
+.home-btn.secondary {
+    border: 2px solid white;
+}
+
+.home-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Формы */
+form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 450px;
+    margin: 40px auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+form h1, form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+input:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 18px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #5a67d8;
+}
+
+/* Tasks */
+.tasks-container {
+    background: white;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tasks-container h1, .tasks-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.task {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task:hover {
+    background: #e9ecef;
+}
+
+.task span:first-child {
+    flex: 1;
+    font-size: 18px;
+    color: #333;
+    margin-right: 15px;
+    word-wrap: break-word;
+}
+
+.task .status {
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.status[data-complete="1"] {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status[data-complete="0"] {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.task div {
+    display: flex;
+    gap: 10px;
+}
+
+.task a {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+.task a[href*="changeStatus"] {
+    background: #28a745;
+}
+
+.task a[href*="delete"] {
+    background: #dc3545;
+}
+
+.task a[href*="Edit"] {
+    background: #007bff;
+}
+
+.no-tasks {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6c757d;
+    font-size: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px dashed #dee2e6;
+}
+
+/* Профиль */
+.profileContainer {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.profileLabel {
+    font-weight: 600;
+    color: #667eea;
+    margin-right: 10px;
+}
+
+.profileContainer p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* Регистрация и логин */
+.reg-container, .login-form {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.regLabel {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+    display: block;
+    text-align: center;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.login-form p {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+.login-form a {
+    color: #667eea;
+}
+
+/* Footer */
+footer {
+    background: rgba(0,0,0,0.1);
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin-top: auto;
+}
