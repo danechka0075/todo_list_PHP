@@ -30,7 +30,7 @@ catch(PDOException $e){
 ?>
 <form class="profileContainer" action="profile.php" method="post">
     <h1>Профиль</h1>
-    <p><label class="profileLabel">Логин: </label><?= htmlspecialchars($user['login']) ?></p>
-    <p><label class="profileLabel">Email: </label><?= htmlspecialchars($user['email']) ?></p>
+    <p class="profileRow"><label class="profileLabel">Логин: </label><?= htmlspecialchars($user['login']) ?></p>
+    <p class="profileRow"><label class="profileLabel">Email: </label><?= htmlspecialchars($user['email']) ?></p>
     <a href="index.php?page=tasks" class="back-link">Вернуться к задачам</a>
 </form>

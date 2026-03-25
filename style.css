@@ -125,6 +125,18 @@ main {
     background: #667eea;
     border: 2px solid white;
 }
+.error {
+    color: #fff;
+    background: #e74c3c;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+.text_task{
+    text-wrap: wrap;
+    width: 200px;
+}
 
 .home-btn.secondary {
     border: 2px solid white;
@@ -284,11 +296,15 @@ input[type="submit"]:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
 }
+.profileRow {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
 
 .profileLabel {
     font-weight: 600;
     color: #667eea;
-    margin-right: 10px;
 }
 
 .profileContainer p {

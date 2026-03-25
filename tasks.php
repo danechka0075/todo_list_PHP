@@ -119,7 +119,7 @@ if(empty($tasks)){?>
         $text = $task['text'];
         $complite = $task['complite'];?>
         <div class="task">
-            <span><?php echo $text?></span>
+            <span class='text_task'><?php echo $text?></span>
             <span class="status"><?=$complite ? "Done" : "In Progress" ?></span>
             <div>
                 <a href="index.php?page=tasks&changeStatus=<?=$task['id_task']?>&complite=<?=$task['complite']?>">Change status</a>

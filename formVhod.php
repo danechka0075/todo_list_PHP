@@ -22,7 +22,8 @@ if(session_status()==PHP_SESSION_NONE)
                     header('Location: index.php?page=tasks');
                 }
                 else{
-                    header('Location: index.php?page=formReg');
+                    header('Location: index.php?page=formVhod&message=error-profile');
+                    exit;
                 }
             }
             catch(PDOException $e)
@@ -30,6 +31,13 @@ if(session_status()==PHP_SESSION_NONE)
                 die("умри дб конекшн");
             }
         }
+?>
+<?php
+    $errors = ['error-profile' => 'Такого пользователя не существует'];
+
+    if (isset($_GET['message']) && isset($errors[$_GET['message']])) {
+        echo "<div class='error'>{$errors[$_GET['message']]}</div>";
+    }
 ?>
 <form action="formVhod.php" method="post" class="login-form">
     <h2>Вход</h2>
